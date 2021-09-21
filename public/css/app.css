@@ -85,3 +85,38 @@ label{
 .form-control{
     min-width: 200px;
 }
+
+.container{
+    display: flex;
+    gap: 50px;
+}
+
+.container .item{
+    border: 2px solid #EEBA30;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    height: calc(50% - 54px);
+    padding: 0 35px;
+}
+
+.container .left{
+    width: 50%;
+}
+
+.container .right{
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+}
+
+.container .right img{
+    width: 100%;
+}
+
+.item h1, .item h2{
+    text-align: center;
+}
+
+.newTournamentDiv{
+    margin-bottom: 20px;
+}
