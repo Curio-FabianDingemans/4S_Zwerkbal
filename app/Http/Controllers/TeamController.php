@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+use App\Models\Tournament;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -14,7 +15,9 @@ class TeamController extends Controller
      */
     public function index()
     {
-        throw new \Exception('Niet geïmplementeerd - lijst van teams kan nog niet getoond worden.');
+        $teams = Team::all();
+        return view('teams/index')
+            ->with('teams', $teams);
     }
 
     /**
