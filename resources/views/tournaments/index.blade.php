@@ -20,12 +20,14 @@
         <tr>
             <th>Toernooi</th>
             <th>Datum</th>
+            <th>Tijd</th>
             <th>&nbsp;</th>
         </tr>
         @foreach($tournaments as $tournament)
             <tr>
                 <td>{{ $tournament->name }}</td>
                 <td>{{ date('d-m-Y', strtotime($tournament->date)) }}</td>
+                <td>{{date('H-i', strtotime($tournament->time))}}</td>
                 <td><a href="{{ route('tournaments.edit', $tournament->id) }}">Aanpassen</a></td>
             </tr>
         @endforeach
